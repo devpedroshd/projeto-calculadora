@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clculadora</title>
+    <title>Calculadora</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
 </head>
 <body>
@@ -42,37 +42,9 @@
                 <td colspan="2"><button class="botão" style="width: 106px;" onclick="insert('0')">0</button></td>
                 <td><button class="botão" onclick="insert('.')">.</button></td>
               </tr>
-
             </table>
         </div>
       </div>
-      <script>
-        function insert(num)
-        {
-          var numero = document.getElementById('Resultado').innerHTML;
-          document.getElementById('Resultado').innerHTML = numero +num;
-        }
-        function clean()
-        {
-          document.getElementById('Resultado').innerHTML = '';
-        }
-        function back()
-        {
-          var Resultado = document.getElementById('Resultado').innerHTML;
-          document.getElementById('Resultado').innerHTML = Resultado.substring(0,Resultado.length -1);
-        }
-        function calcular()
-        {
-          var Resultado = document.getElementById('Resultado').innerHTML;
-          if(Resultado)
-          {
-            document.getElementById('Resultado').innerHTML = eval(Resultado);
-          }
-          else
-          {
-            document.getElementById('Resultado').innerHTML = 'Nada para calcular'
-          }
-        }
-      </script>
 </body>
+<script src="functions.js"></script>
 </html>
